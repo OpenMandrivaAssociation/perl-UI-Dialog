@@ -8,10 +8,8 @@ Group:          Development/Perl
 Summary:        OOPerl wrapper for the various dialog applications
 Source0:        %{realname}-%{version}.tar.bz2
 Url:            http://www.cpan.org
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:       perl cdialog
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 
 %description
 UI::Dialog is a OOPerl wrapper for the various dialog applications. These
