@@ -5,6 +5,7 @@ Release:        %mkrel 4
 License:        GPL
 
 Group:          Development/Perl
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Summary:        OOPerl wrapper for the various dialog applications
 Source0:        %{realname}-%{version}.tar.bz2
 Url:            http://www.cpan.org
