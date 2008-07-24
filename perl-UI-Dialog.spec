@@ -1,7 +1,7 @@
 %define realname        UI-Dialog
 Name:           perl-%realname
 Version:        1.08
-Release:        %mkrel 4
+Release:        %mkrel 6
 License:        GPL
 
 Group:          Development/Perl
