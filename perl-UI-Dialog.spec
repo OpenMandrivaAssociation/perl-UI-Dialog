@@ -1,16 +1,20 @@
-%define realname        UI-Dialog
-Name:           perl-%realname
-Version:        1.08
-Release:        %mkrel 7
-License:        GPL
+%define upstream_name    UI-Dialog
+%define upstream_version 1.08
 
-Group:          Development/Perl
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:        OOPerl wrapper for the various dialog applications
-Source0:        %{realname}-%{version}.tar.bz2
-Url:            http://www.cpan.org
+License:        GPL
+Group:          Development/Perl
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/UI/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires:       perl cdialog
-BuildArch:      noarch
 
 %description
 UI::Dialog is a OOPerl wrapper for the various dialog applications. These
@@ -33,7 +37,7 @@ was done to break away from the bad choice of name (UserDialogPerlModule) and
 to implement a cleaner, more detached, OOPerl interface.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -54,4 +58,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc examples README CONTRIBUTORS Changes TODO COPYRIGHT
 %{perl_vendorlib}/*
 %{_mandir}/*/*
-
