@@ -8,7 +8,7 @@ Release:	6
 Summary:	OOPerl wrapper for the various dialog applications
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/UI/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
