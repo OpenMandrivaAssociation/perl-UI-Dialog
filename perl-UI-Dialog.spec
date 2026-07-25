@@ -1,15 +1,15 @@
 %define upstream_name    UI-Dialog
-%define upstream_version 1.08
+%define upstream_version 1.21
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	OOPerl wrapper for the various dialog applications
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/UI/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/UI-Dialog
+Source0:	https://cpan.metacpan.org/authors/id/K/KC/KCK/UI-Dialog-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
