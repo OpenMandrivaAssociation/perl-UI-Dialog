@@ -1,15 +1,13 @@
 %define upstream_name    UI-Dialog
-%define upstream_version 1.21
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.21
+Release:	2
 
 Summary:	OOPerl wrapper for the various dialog applications
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/UI-Dialog
-Source0:	https://cpan.metacpan.org/authors/id/K/KC/KCK/UI-Dialog-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KC/KCK/UI-Dialog-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -38,7 +36,7 @@ was done to break away from the bad choice of name (UserDialogPerlModule) and
 to implement a cleaner, more detached, OOPerl interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -66,9 +64,7 @@ make test
 - rebuild
 
   + Jérôme Quelin <jquelin@mandriva.org>
-    - rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.08-7mdv2009.0
+    - rebuild using %1.21 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.08-7mdv2009.0
 + Revision: 258708
 - rebuild
 
